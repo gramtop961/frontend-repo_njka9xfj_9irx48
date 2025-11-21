@@ -21,8 +21,8 @@ export default function Product({ lang }) {
             <ul className="mt-6 grid grid-cols-2 gap-4 text-sm text-white/80">
               <li>500 ml • Glass</li>
               <li>First cold press</li>
-              <li>Polyphenols > 350 mg/kg</li>
-              <li>Acidity < 0.2%</li>
+              <li>Polyphenols &gt; 350 mg/kg</li>
+              <li>Acidity &lt; 0.2%</li>
             </ul>
             <div id="shop" className="mt-8 flex items-center gap-3">
               <a href="#contact" className="inline-flex items-center rounded-full bg-gradient-to-br from-[#e9d8a6] to-[#c8a96a] text-black px-6 py-3 font-medium">
