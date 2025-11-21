@@ -3,15 +3,13 @@
 > vite
 
 
-  VITE v5.4.20  ready in 269 ms
+  VITE v5.4.20  ready in 286 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.3.254:3000/
-1:05:21 PM [vite] Pre-transform error: Transform failed with 1 error:
+1:25:49 PM [vite] Pre-transform error: Transform failed with 1 error:
 /home/workspace/src/components/Product.jsx:25:28: ERROR: Expected identifier but found "0"
-1:05:22 PM [vite] ✨ new dependencies optimized: lucide-react, framer-motion
-1:05:22 PM [vite] ✨ optimized dependencies changed. reloading
-1:05:22 PM [vite] Internal server error: Transform failed with 1 error:
+1:25:50 PM [vite] Internal server error: Transform failed with 1 error:
 /home/workspace/src/components/Product.jsx:25:28: ERROR: Expected identifier but found "0"
   Plugin: vite:esbuild
   File: /home/workspace/src/components/Product.jsx:25:28
@@ -34,9 +32,30 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-1:05:29 PM [vite] Pre-transform error: Transform failed with 1 error:
+1:25:50 PM [vite] Internal server error: Transform failed with 1 error:
 /home/workspace/src/components/Product.jsx:25:28: ERROR: Expected identifier but found "0"
-1:06:00 PM [vite] Internal server error: Transform failed with 1 error:
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Product.jsx:25:28
+  
+  Expected identifier but found "0"
+  23 |                <li>First cold press</li>
+  24 |                <li>Polyphenols > 350 mg/kg</li>
+  25 |                <li>Acidity < 0.2%</li>
+     |                              ^
+  26 |              </ul>
+  27 |              <div id="shop" className="mt-8 flex items-center gap-3">
+  
+      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
+      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+1:25:54 PM [vite] Internal server error: Transform failed with 1 error:
 /home/workspace/src/components/Product.jsx:25:28: ERROR: Expected identifier but found "0"
   Plugin: vite:esbuild
   File: /home/workspace/src/components/Product.jsx:25:28
