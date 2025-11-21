@@ -1,11 +1,21 @@
 import { Leaf } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function Heritage({ lang }) {
   return (
     <section id="heritage" className="relative py-24">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-[20%] top-[10%] h-24 w-24 rounded-full gold-gradient opacity-20 blur-2xl" />
+      </div>
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="order-2 md:order-1"
+          >
             <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">
               {lang === 'de' ? 'Nordafrikanisches Erbe, europäischer Anspruch' : 'North African heritage, European standards'}
             </h2>
@@ -27,16 +37,22 @@ export default function Heritage({ lang }) {
               <Leaf size={18} />
               <span className="uppercase tracking-widest text-xs">Tunisia • Mediterranean</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="order-1 md:order-2 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="order-1 md:order-2 relative"
+          >
             <div className="aspect-[4/5] w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5">
               <img src="https://images.unsplash.com/photo-1695470393142-4c14422ffb9a?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxPbGl2ZSUyMGdyb3Zlc3xlbnwwfDB8fHwxNzYzNzMwMzEyfDA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80" alt="Olive groves" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -left-6 -bottom-6 hidden md:block rounded-2xl border border-[#c8a96a]/30 bg-black/50 backdrop-blur px-4 py-3 text-[#e9d8a6]">
               <span className="text-xs uppercase tracking-widest">Kaltgepresst • Extra Nativ</span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

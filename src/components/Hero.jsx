@@ -3,8 +3,9 @@ import { motion } from 'framer-motion'
 export default function Hero({ lang }) {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(200,169,106,0.15),transparent_60%)]" />
-      <div className="absolute inset-0 opacity-20" style={{backgroundImage:'url(https://images.unsplash.com/photo-1629380321590-3b3f75d66dec?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjM3MTU4MTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80)', backgroundSize:'cover', backgroundPosition:'center'}}></div>
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-[-20%] h-[60vh] w-[60vw] -translate-x-1/2 rounded-full gold-gradient opacity-20 aurora" />
+      </div>
 
       <div className="relative mx-auto max-w-7xl px-6 pt-40 pb-28">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -16,7 +17,7 @@ export default function Hero({ lang }) {
               className="text-5xl md:text-6xl font-semibold tracking-tight text-white"
             >
               Carthago
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#e9d8a6] to-[#c8a96a]">
+              <span className="block gold-text">
                 Extra Virgin Olive Oil
               </span>
             </motion.h1>
@@ -57,11 +58,12 @@ export default function Hero({ lang }) {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             className="relative"
           >
-            <div className="relative mx-auto h-[520px] w-[320px] rounded-[2rem] bg-gradient-to-b from-zinc-900 to-zinc-800/80 border border-white/10 p-4">
+            <div className="relative mx-auto h-[520px] w-[320px] rounded-[2rem] bg-gradient-to-b from-zinc-900 to-zinc-800/80 border border-white/10 p-4 float">
               <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-[#e9d8a6]/20 to-transparent blur-xl" />
               <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=800&auto=format&fit=crop" alt="Carthago bottle" className="relative h-full w-full object-cover rounded-[1.6rem]" />
             </div>

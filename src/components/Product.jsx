@@ -1,15 +1,32 @@
+import { motion } from 'framer-motion'
+
 export default function Product({ lang }) {
   return (
     <section id="product" className="relative py-24">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute right-[15%] bottom-[5%] h-28 w-28 rounded-full gold-gradient opacity-20 blur-2xl" />
+      </div>
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative order-2 md:order-1">
-            <div className="relative mx-auto h-[460px] w-full max-w-sm rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-800/80 p-4">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="relative order-2 md:order-1"
+          >
+            <div className="relative mx-auto h-[460px] w-full max-w-sm rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-800/80 p-4 float">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-[#e9d8a6]/20 to-transparent blur-xl" />
               <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?q=80&w=800&auto=format&fit=crop" alt="Carthago Premium Olive Oil" className="relative h-full w-full rounded-2xl object-cover" />
             </div>
-          </div>
-          <div className="order-1 md:order-2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="order-1 md:order-2"
+          >
             <h2 className="text-3xl md:text-4xl font-semibold text-white">{lang==='de' ? 'Das Produkt' : 'The Product'}</h2>
             <p className="mt-4 text-white/70">
               {lang==='de' ? (
@@ -32,7 +49,7 @@ export default function Product({ lang }) {
                 {lang==='de' ? 'Privatkauf' : 'Private Purchase'}
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
